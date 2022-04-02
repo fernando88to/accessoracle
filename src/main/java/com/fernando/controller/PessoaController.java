@@ -3,10 +3,9 @@ package com.fernando.controller;
 import com.fernando.domain.Pessoa;
 import com.fernando.repository.PessoaRepository;
 import com.fernando.services.PessoaService;
+import io.quarkus.panache.common.Sort;
 
 import javax.inject.Inject;
-import javax.persistence.PersistenceException;
-import javax.transaction.Transactional;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -26,7 +25,7 @@ public class PessoaController {
 
     @GET
     public List<Pessoa> getPessoas() {
-        return Pessoa.listAll();
+        return Pessoa.listAll(Sort.by("id").descending());
     }
     @GET
     @Path("/list")

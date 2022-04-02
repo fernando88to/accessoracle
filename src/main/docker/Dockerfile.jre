@@ -4,6 +4,12 @@
 
 
 FROM eclipse-temurin:17-jre-alpine
-COPY build/quarkus-app/ /quarkus-app
+
+COPY --chown=185 build/quarkus-app/lib/ /deployments/lib/
+COPY --chown=185 build/quarkus-app/*.jar /deployments/
+COPY --chown=185 build/quarkus-app/app/ /deployments/app/
+COPY --chown=185 build/quarkus-app/quarkus/ /deployments/quarkus/
+
 EXPOSE 8080
-CMD ["java", "-jar", "/quarkus-app/quarkus-run.jar"]
+EXPOSE 8090
+CMD ["java", "-jar", "/deployments/quarkus-run.jar"]
