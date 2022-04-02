@@ -1,0 +1,9 @@
+# ./gradlew build
+# docker build -f src/main/docker/Dockerfile.jre -t quarkus/accessoracle-jvm .
+# docker run -i --rm -p 8080:8080 quarkus/accessoracle-jvm
+
+
+FROM eclipse-temurin:17-jre-alpine
+COPY build/quarkus-app/ /quarkus-app
+EXPOSE 8080
+CMD ["java", "-jar", "/quarkus-app/quarkus-run.jar"]
