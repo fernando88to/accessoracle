@@ -46,4 +46,10 @@ public class Pessoa extends PanacheEntityBase {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    public Pessoa(Long id, String nome, LocalDate dataNascimento) {
+        this.id = id;
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+    }
 }
