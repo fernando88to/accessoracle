@@ -43,20 +43,12 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 ./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
 ```
 
-You can then execute your native executable with: `./build/accessoracle-1.0.0-SNAPSHOT-runner`
 
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling.
 
-## Related Guides
 
-- RESTEasy JSON-B ([guide](https://quarkus.io/guides/rest-json)): JSON-B serialization support for RESTEasy
-- Hibernate ORM with Panache ([guide](https://quarkus.io/guides/hibernate-orm-panache)): Simplify your persistence code for Hibernate ORM via the active record or the repository pattern
-- RESTEasy JAX-RS ([guide](https://quarkus.io/guides/rest-json)): REST endpoint framework implementing JAX-RS and more
 
-## Provided Code
+## Extensões utilizadas
 
-### RESTEasy JAX-RS
-
-Easily start your RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+- RESTEasy JSON-B 
+- Hibernate ORM with Panache 
+- RESTEasy JAX-RS 

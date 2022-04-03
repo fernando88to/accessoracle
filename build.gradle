@@ -9,6 +9,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'io.quarkus:quarkus-jacoco'
+    implementation 'io.quarkus:quarkus-smallrye-health'
     implementation 'io.quarkus:quarkus-hibernate-validator'
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-resteasy-jsonb'
